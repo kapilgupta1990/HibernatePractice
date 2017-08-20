@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+	version="2.1">
+	<persistence-unit name="POSTGRES_JPA"
+		transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<class>com.cdac.gist.mapping.onetomany.unidirectional.Book</class>
+		<class>com.cdac.gist.mapping.onetomany.unidirectional.Chapter</class>
+		<class>com.cdac.gist.mapping.inherientence.Contract_Employee</class>
+		<class>com.cdac.gist.mapping.inherientence.Employee</class>
+		<class>com.cdac.gist.model.NamedQueries1</class>
+		<class>com.cdac.gist.mapping.onetoone.Person</class>
+		<class>com.cdac.gist.mapping.manytomany.Publisher</class>
+		<class>com.cdac.gist.mapping.inherientence.Regular_Employee</class>
+		<class>com.cdac.gist.mapping.manytomany.Subscriber</class>
+		<class>com.cdac.gist.mapping.inherientence.tableperhierarchy.Employee</class>
+		<class>com.cdac.gist.mapping.inherientence.Employee1</class>
+		<class>com.cdac.gist.sample.HelloWorld</class>
+		<properties>
+			<property name="hbm2ddl.auto" value="create"></property>
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:derby://localhost:1527/dbname;create=true" />
+			<property name="javax.persistence.jdbc.user" value="" />
+			<property name="javax.persistence.jdbc.password" value="" />
+			<property name="hibernate.dialect" value="org.hibernate.dialect.DerbyDialect" />
+			<!-- <property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"/> -->
+			<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver" />
+			<property name="javax.persistence.schema-generation.database.action"
+				value="update" />
+
+		</properties>
+
+
+	</persistence-unit>
+</persistence>
